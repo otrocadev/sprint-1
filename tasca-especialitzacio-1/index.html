@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div id="header-menu">
+        <img id="logo" class="header-menu-element" src="" alt="logo" />
+        <nav class="header-menu-element">.nav</nav>
+        <span class="header-menu-element">.social</span>
+      </div>
+      <div id="banner-container">
+        <h1>.banner</h1>
+      </div>
+    </header>
+    <main>
+      <div id="articles">
+        <article>.article</article>
+        <article>.article</article>
+        <article>.article</article>
+        <article>.article</article>
+        <nav>.navegacion</nav>
+      </div>
+      <div id="publicidad">
+        <img src="" alt=".publicidad" /><img src="" alt=".publicidad" />
+      </div>
+    </main>
+    <footer>
+      <span> .pie </span>
+    </footer>
+  </body>
+</html>
+
+<style>
+  body {
+    max-width: 1200px;
+    margin: auto;
+    color: aliceblue;
+  }
+
+  header {
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  main {
+    margin-top: 20px;
+    padding: 20px;
+    gap: 20px;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    @media only screen and (max-width: 720px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  footer {
+    background-color: black;
+    display: flex;
+    padding: 20px;
+
+    & span {
+      width: 100%;
+      background-color: bisque;
+      color: blueviolet;
+      padding: 20px;
+      font-size: 24px;
+    }
+  }
+
+  h1 {
+    background: yellowgreen;
+    font-size: 36px;
+    padding: 20px;
+    margin: 0;
+  }
+
+  #header-menu {
+    display: grid;
+    font-size: 24px;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 20px;
+    background: gray;
+    gap: 20px;
+    @media only screen and (max-width: 720px) {
+      grid-template-columns: 1fr;
+    }
+
+    & .header-menu-element {
+      background: red;
+      padding: 20px;
+      transition: 300ms ease-in-out;
+    }
+
+    & #logo:hover {
+      background-color: orange;
+      scale: 1.15;
+    }
+  }
+
+  #banner-container {
+    padding: 20px;
+    background: orange;
+  }
+
+  #articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: slategray;
+    padding: 20px;
+    gap: 20px;
+    font-size: 24px;
+
+    @media only screen and (max-width: 480px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & article,
+    & nav {
+      padding: 20px;
+    }
+
+    & article {
+      background-color: slateblue;
+    }
+
+    & nav {
+      background-color: blue;
+      grid-column: span 2;
+    }
+  }
+
+  #publicidad {
+    display: flex;
+    flex-direction: column;
+    padding: 28px;
+    gap: 12px;
+    font-size: 20px;
+    background-color: red;
+    color: black;
+
+    & img {
+      background-color: yellow;
+      padding: 20px;
+    }
+  }
+</style>
