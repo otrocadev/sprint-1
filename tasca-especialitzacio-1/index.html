@@ -8,7 +8,7 @@
   <body>
     <header>
       <div id="header-menu">
-        <img id="logo" class="header-menu-element" src="" alt="logo" />
+        <img class="header-menu-element" src="" alt="logo" />
         <nav class="header-menu-element">.nav</nav>
         <span class="header-menu-element">.social</span>
       </div>
@@ -104,11 +104,10 @@
       background: red;
       padding: 20px;
       transition: 300ms ease-in-out;
-    }
-
-    & #logo:hover {
-      background-color: orange;
-      scale: 1.15;
+      &:hover {
+        background-color: orange;
+        scale: 1.15;
+      }
     }
   }
 
